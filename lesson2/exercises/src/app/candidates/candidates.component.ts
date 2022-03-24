@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { unwatchFile } from 'fs';
 
 @Component({
   selector: 'candidates',
@@ -24,7 +25,11 @@ export class CandidatesComponent implements OnInit {
   }
 
   // Code the addToCrew function here:
-
+   addToCrew(member: object) {
+   if(!this.crew.includes(member)) {
+     this.crew.push(member);
+   }
+   }
 
   // BONUS: Code the changeMissionName function here:
 
